@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Local Graph Start'
+  short_description: 'Build a first local SDLC graph from existing code'
+  default_prompt: 'Use $local-graph-start to build a first SDLC graph from this code, locally and without changing the repository.'

@@ -1,0 +1,4 @@
+interface:
+  display_name: 'SDLC Worktree'
+  short_description: 'Safely author isolated SDLC graph proposals'
+  default_prompt: 'Use $sdlc-worktree to update this repository and its isolated SDLC proposal safely.'

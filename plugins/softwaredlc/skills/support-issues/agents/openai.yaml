@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Support Issues'
+  short_description: 'List, read, and log SoftwareDLC Maintain support issues'
+  default_prompt: 'Use $support-issues to check whether this help-desk ticket is already logged, and log it if not.'

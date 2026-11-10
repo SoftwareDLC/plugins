@@ -1,0 +1,17 @@
+{
+  "name": "softwaredlc",
+  "description": "SoftwareDLC's Claude Code plugins. Published from the SoftwareDLC repository's plugins/ folder; this file becomes .claude-plugin/marketplace.json in each published plugin repository.",
+  "owner": {
+    "name": "SoftwareDLC",
+    "email": "support@softwaredlc.com"
+  },
+  "plugins": [
+    {
+      "name": "softwaredlc",
+      "source": "./plugins/softwaredlc",
+      "description": "(Beta) Safely inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree.",
+      "version": "0.10.2",
+      "category": "productivity"
+    }
+  ]
+}

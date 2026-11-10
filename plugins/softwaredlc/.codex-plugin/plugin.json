@@ -1,0 +1,26 @@
+{
+  "name": "softwaredlc",
+  "version": "0.10.2+codex.20261110180403",
+  "description": "(Beta) Safely inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree.",
+  "author": {
+    "name": "SoftwareDLC"
+  },
+  "license": "FSL-1.1-ALv2",
+  "keywords": ["softwaredlc", "sdlc", "worktree", "graph", "codex"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SoftwareDLC",
+    "shortDescription": "(Beta) Author isolated SDLC graph proposals safely.",
+    "longDescription": "SoftwareDLC is in Beta. Use the explicitly bound local SoftwareDLC AI worktree to inspect context, manage the Git-ignored graph projection, validate and compare proposals, save coherent changes, and recover pending transactions without mutating user-owned branch or history state.",
+    "developerName": "SoftwareDLC",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Check this repository's SDLC context and continue the isolated proposal.",
+      "Validate and compare the current SDLC proposal for review.",
+      "Save this coherent graph change to the bound AI worktree."
+    ]
+  },
+  "mcpServers": "./.mcp.codex.json",
+  "apps": "./.app.json"
+}
