@@ -1,33 +1,17 @@
 {
   "name": "softwaredlc",
-  "version": "0.10.2",
-  "description": "(Beta) Safely inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree.",
+  "version": "0.10.3",
+  "description": "(Beta) Build a first SoftwareDLC graph from your code, and inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree.",
   "author": {
-    "name": "SoftwareDLC"
+    "name": "SoftwareDLC",
+    "email": "support@softwaredlc.com",
+    "url": "https://www.softwaredlc.com"
   },
+  "homepage": "https://www.softwaredlc.com",
+  "repository": "https://github.com/SoftwareDLC/plugins",
   "license": "FSL-1.1-ALv2",
   "keywords": ["softwaredlc", "sdlc", "worktree", "graph", "claude-code"],
+  "privacyPolicyUrl": "https://www.softwaredlc.com/privacy-policy",
   "skills": "./skills/",
-  "mcpServers": [
-    "./.mcp.json",
-    {
-      "softwaredlc-hosted": {
-        "type": "http",
-        "url": "${user_config.hosted_origin}/api/mcp?auth=required",
-        "headers": {
-          "SDLC-Client": "claude-plugin/0.10.2",
-          "SDLC-API-Version": "2026-10-15"
-        }
-      }
-    }
-  ],
-  "userConfig": {
-    "hosted_origin": {
-      "type": "string",
-      "title": "SoftwareDLC hosted origin",
-      "description": "HTTPS origin of the SoftwareDLC app for the login-required hosted connector. Defaults to production; set https://localhost:3000 for local development. To use only the local sdlc-worktree server, turn softwaredlc-hosted off in /mcp.",
-      "required": false,
-      "default": "https://www.softwaredlc.com"
-    }
-  }
+  "mcpServers": "./.mcp.json"
 }

@@ -24,9 +24,8 @@ These tools come from the hosted connector (`softwaredlc-hosted`, or the
 stop:
 
 - Claude Code: the `softwaredlc-hosted` connector is off or not signed in;
-  the user enables it and signs in with `/mcp`. Its origin is the plugin's
-  `hosted_origin` in `/plugin manage` (`https://localhost:3000` locally, or
-  `https://www.softwaredlc.com`).
+  the user enables it and signs in with `/mcp`. It connects to
+  `https://www.softwaredlc.com`.
 - Codex: the plugin declares no hosted server; the user connects the
   SoftwareDLC app, or adds `https://www.softwaredlc.com/api/mcp?auth=required`
   as an HTTP MCP server.

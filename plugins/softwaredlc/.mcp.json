@@ -3,6 +3,14 @@
     "sdlc-worktree": {
       "command": "node",
       "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/start-worktree.mjs"]
+    },
+    "softwaredlc-hosted": {
+      "type": "http",
+      "url": "https://www.softwaredlc.com/api/mcp?auth=required",
+      "headers": {
+        "SDLC-Client": "claude-plugin/0.10.3",
+        "SDLC-API-Version": "2026-10-15"
+      }
     }
   }
 }
