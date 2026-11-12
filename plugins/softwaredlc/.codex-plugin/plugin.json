@@ -1,6 +1,6 @@
 {
   "name": "softwaredlc",
-  "version": "0.10.3+codex.20261110235623",
+  "version": "0.10.4+codex.20261111205145",
   "description": "(Beta) Build a first SoftwareDLC graph from your code, and inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree.",
   "author": {
     "name": "SoftwareDLC"
