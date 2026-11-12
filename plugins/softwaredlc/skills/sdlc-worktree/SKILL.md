@@ -15,15 +15,17 @@ RPC, generic HTTP, or destructive lifecycle actions.
 Public questions use the bundled reference skill and need no local server.
 For local graph work, Codex or Claude Code must open the intended Git
 repository with Node.js 22 or newer and `@software-dlc/cli` installed globally
-(`npm install -g @software-dlc/cli`). See the plugin's `../../README.md` for
+(`npm install -g @software-dlc/cli@latest`). See the plugin's `../../README.md` for
 prerequisites. The plugin launcher resolves the current repository root. It
 runs a repository's own install and loads its optional `.env.local` only once
 the user approved the repository (`sdlc allow-mcp`, run by the user in their own
 terminal); otherwise it runs the global install without that `.env.local`.
-When the server offers no tools, its instructions name one step (`package_missing`);
-when stderr reports `repository_unapproved`, the step is the approval. Tell the
-user that step and to restart the session; never run it for them, and never
-install the package into their repository. The launcher never installs packages, builds them, borrows another
+When the server offers no tools in a Git repository, its instructions name the
+step: install the command line, approve the repository, or rebuild or revoke an
+approved install. Outside a Git repository, its instructions say to open one.
+Follow the bundled `softwaredlc-setup` skill: tell the user that step and to
+restart the session; never run it for them, and never install the package into
+their repository. The launcher never installs packages, builds them, borrows another
 checkout's binding, or selects an endpoint.
 
 When setup fails, use the returned bounded error guidance. `sdlc_context` with
