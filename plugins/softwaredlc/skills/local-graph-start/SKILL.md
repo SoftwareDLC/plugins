@@ -25,13 +25,11 @@ You need one command: `sdlc`, the graph CLI of the `@software-dlc/cli`
 package (Node.js 22 or newer).
 
 Check with `command -v sdlc`, then `sdlc --version`: this skill describes
-version 0.156.0 or newer. If it is missing, ask the user where their
-SoftwareDLC install is, for example the `node_modules/.bin` folder of a
-project that installed it, and call it by that absolute path. If the version
-is older, tell the user before going on: what this skill says may not hold,
-and `npm install -g @software-dlc/cli@latest` upgrades it. The upgrade is
-theirs to run or decline. Never install the package into the user's
-repositories.
+version 0.157.5 or newer of `@software-dlc/cli`. If it is missing or older, follow the
+`softwaredlc-setup` skill: the user installs or updates it globally in their
+own terminal (`npm install -g @software-dlc/cli@latest`), and you check
+`sdlc --version` again once they say it is done. The install is theirs to run
+or decline. Never install the package into the user's repositories.
 
 ## 2. Agree the scope
 

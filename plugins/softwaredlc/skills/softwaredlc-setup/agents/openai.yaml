@@ -1,0 +1,4 @@
+interface:
+  display_name: 'SoftwareDLC Setup'
+  short_description: 'Check the sdlc command line and get the steps to set it up'
+  default_prompt: 'Use $softwaredlc-setup to check that the sdlc command line is installed and tell me the steps to run.'

@@ -25,6 +25,10 @@ that links the two. This plugin brings that graph into Claude Code:
   logs new ones where you may also comment on the project.
 - **Ask about SoftwareDLC.** The `softwaredlc-reference` skill answers
   questions about SoftwareDLC and its graph vocabulary, with no login.
+- **Set up.** The `softwaredlc-setup` skill checks for Node.js and the `sdlc`
+  command line, points you to Node.js if you need it, and gives you the
+  commands to install or update the `sdlc` command line and to approve a
+  repository's own copy, for you to run in your own terminal.
 
 ## Install
 
@@ -36,14 +40,17 @@ that links the two. This plugin brings that graph into Claude Code:
 The local skills need Node.js 22 or newer and the `sdlc` command line tool:
 
 ```bash
-npm install -g @software-dlc/cli
+npm install -g @software-dlc/cli@latest
 ```
 
-or install `@software-dlc/cli` as a development dependency of the repository.
-The plugin never installs or builds anything itself.
+The plugin's launcher never installs or builds anything, and its skills ask
+Claude to leave every install, update and approval to you. In a Git
+repository on Node.js 22 or newer, until the tool is installed, the local
+server stays connected with no tools, and its instructions ask Claude to tell
+you the step to take. On an older Node.js, the server fails to start.
 
-The local MCP server runs a repository's own installed copy of the tool only
-after you approve that repository once, in your own terminal:
+If a repository has its own installed copy of the tool, the local MCP server
+runs it only after you approve that repository once, in your own terminal:
 
 ```bash
 sdlc allow-mcp            # in the repository; --list and --revoke show and undo approvals
@@ -61,8 +68,11 @@ after approving.
   the repository, and otherwise the one on your `PATH`. For an approved
   repository it also loads that repository's `.env.local`. Skills ask Claude to
   run commands in your terminal, which you see and approve as usual: `sdlc`
-  commands, read-only `git` commands such as `git status`, and, in
-  `local-graph-start`, scripts Claude writes to read your code into the graph.
+  commands; `git` commands, read-only ones such as `git status`, and in
+  `local-graph-start` a `git switch` back to the branch the graph is on; in
+  `softwaredlc-setup`, the checks `node --version` and `command -v sdlc`; and,
+  in `local-graph-start`, scripts Claude writes to read your code into the
+  graph.
 - **Sends to SoftwareDLC.** The `softwaredlc-hosted` connector is on by
   default and connects to `https://www.softwaredlc.com/api/mcp`. Until you sign
   in with `/mcp`, the service answers only with a sign-in request. Once you sign

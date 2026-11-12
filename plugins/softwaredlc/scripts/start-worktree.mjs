@@ -43,7 +43,7 @@ function git(cwd, args) {
   }).trim();
 }
 
-const APPROVE = 'run sdlc allow-mcp in it in your own terminal';
+const APPROVE = "run sdlc allow-mcp in it in the person's own terminal";
 
 // The path an approval names for the folder at `cwd`, or null when none can (sdlc allow-mcp's
 // repositoryKey and the engine's allow_mcp.repository_key hold the same rule, which
@@ -259,20 +259,20 @@ async function start() {
 
   const approved = await isApproved(process.cwd());
   const server = await findServer(repository_root, approved);
-  if (server.missing === 'repository') {
-    fail(
-      'package_missing',
-      `This repository's ${server.package} has no usable ${BIN} bin. Reinstall it, or build it first in a workspace copy, then restart the session. The plugin does not install or build anything itself.`
-    );
-    return;
-  }
+  // With no server to run, stay connected with no tools (as outside Git), so a first session shows
+  // no failed server. The text is for the person: the agent relays the step and never runs it, and
+  // it names only a global install and no path.
   if (server.missing) {
-    fail(
-      'package_missing',
-      server.skipped
-        ? `This repository has its own ${server.skipped}, which the plugin runs only after you approve the repository (${APPROVE}), or install ${PACKAGE} globally; then restart the session. The plugin does not install or build anything itself.`
-        : `Install ${PACKAGE} globally, or in this repository (for example npm install --save-dev ${PACKAGE}) and approve the repository (${APPROVE}); then restart the session. The plugin does not install or build anything itself.`
-    );
+    const relay =
+      'The sdlc-worktree server offers no tools until the person does the step below. Tell the person the step and let them run it in their own terminal; never run it yourself.';
+    const global = `install ${PACKAGE} globally with npm install -g ${PACKAGE}`;
+    const step =
+      server.missing === 'repository'
+        ? `This repository is approved, so the plugin runs only its own ${server.package} install, which has no usable ${BIN} bin. Step: if the sdlc command is missing, ${global}; then revoke the approval (run sdlc allow-mcp --revoke in it in the person's own terminal) so the global install runs, or instead rebuild the install the person approved; then restart the session.`
+        : server.skipped
+          ? `This repository has its own ${server.skipped} install, which the plugin runs only once the person approves the repository. Step: approve it (${APPROVE}, typing the folder name when asked), or ${global}; then restart the session.`
+          : `The SoftwareDLC command line is not installed. Step: ${global}, then restart the session. Never install it into this repository.`;
+    serveNothing('package_missing', `${relay} ${step} The plugin does not install or build anything itself.`);
     return;
   }
   const skipped_env =
