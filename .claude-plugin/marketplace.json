@@ -10,7 +10,7 @@
       "name": "softwaredlc",
       "source": "./plugins/softwaredlc",
       "description": "(Beta) Build a first SoftwareDLC graph from your code, and inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree.",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "category": "productivity"
     }
   ]
