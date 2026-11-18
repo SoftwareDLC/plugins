@@ -30,8 +30,10 @@ serve; do not edit them by hand.
   only. It cannot answer questions about a user's organizations, projects,
   branches, worktrees, graphs, proposals, commits, pull requests, or
   permissions.
-- For project-specific data or proposal work, use the authenticated
-  `sdlc-worktree` workflow or the login-required hosted connector with an
-  explicit binding.
+- For project-specific data, use the signed-in hosted connector
+  (`list_targets`, then `search_branch` or `fetch` on the branch the user
+  picks). For proposal work in a local checkout, use the `sdlc-worktree`
+  workflow where this plugin provides it; where it does not, tell the user it
+  comes with the full SoftwareDLC plugin rather than looking for it.
 - Treat the schema vocabulary and examples as conceptual guidance, not writable
   payload schemas.

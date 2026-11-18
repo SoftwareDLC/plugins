@@ -1,6 +1,6 @@
 {
   "name": "softwaredlc-connector",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "description": "(Beta) SoftwareDLC reference knowledge, read access to your SoftwareDLC projects and SDLC graphs, and Maintain support issues (list, read, and log) through the hosted SoftwareDLC connector.",
   "author": {
     "name": "SoftwareDLC",
