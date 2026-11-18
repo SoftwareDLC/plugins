@@ -1,13 +1,13 @@
 ---
 name: softwaredlc-hosted
-description: Use the hosted SoftwareDLC connector in claude.ai to list the user's SoftwareDLC organizations, projects, and branches, read a branch's accepted SDLC graph (list_targets, search_branch, fetch, resolve), or look up SoftwareDLC reference material. Use when the user asks about their SoftwareDLC projects, branches, stories, features, components, or graph, or names SoftwareDLC tools.
+description: Use the hosted SoftwareDLC connector to list the user's SoftwareDLC organizations, projects, and branches, read a branch's accepted SDLC graph (list_targets, search_branch, fetch, resolve), or look up SoftwareDLC reference material. Use when the user asks about their SoftwareDLC projects, branches, stories, features, components, or graph, or names SoftwareDLC tools.
 ---
 
 # SoftwareDLC Hosted Connector
 
-This plugin's connector reaches the hosted SoftwareDLC server. There is no
-local repository, shell, `sdlc` CLI, or local `sdlc-worktree` server here; do
-not look for them or ask the user to run them.
+This plugin's connector reaches the hosted SoftwareDLC server. The plugin has
+no `sdlc` command line and no local `sdlc-worktree` server; do not look for
+them or ask the user to run them.
 
 ## Public questions
 
@@ -23,7 +23,7 @@ move between their organizations, projects, and branches in the same chat.
 
 1. Choose the branch with the user.
    - If the conversation has the project's `softwaredlc.project.json` (pasted,
-     or attached to the claude.ai Project), pass the complete parsed JSON
+     attached, or in the open folder), pass the complete parsed JSON
      object unchanged as the `binding` argument of `resolve`. Its
      `canonical_binding.branch_id` is the branch to read. Repeat resolution in
      every new chat.
@@ -54,5 +54,5 @@ user's own repository tooling. Do not claim to have changed the graph.
 
 The first connection signs in to SoftwareDLC and asks the user to consent.
 If sign-in is refused because the client is not enabled, SoftwareDLC has not
-admitted claude.ai's connector on that server; tell the user to ask a
+admitted this app's connector on that server; tell the user to ask a
 SoftwareDLC operator, and do not ask for credentials or API keys in chat.

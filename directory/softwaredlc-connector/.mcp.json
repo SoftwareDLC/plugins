@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "softwaredlc-hosted": {
+      "type": "http",
+      "url": "https://www.softwaredlc.com/api/mcp",
+      "headers": {
+        "SDLC-Sign-In": "required",
+        "SDLC-Client": "claude-plugin/0.10.9",
+        "SDLC-API-Version": "2026-10-15"
+      }
+    }
+  }
+}

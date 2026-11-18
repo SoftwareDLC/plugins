@@ -1,0 +1,22 @@
+{
+  "name": "softwaredlc-connector",
+  "version": "0.10.9",
+  "description": "(Beta) SoftwareDLC reference knowledge, read access to your SoftwareDLC projects and SDLC graphs, and Maintain support issues (list, read, and log) through the hosted SoftwareDLC connector.",
+  "author": {
+    "name": "SoftwareDLC",
+    "email": "support@softwaredlc.com",
+    "url": "https://www.softwaredlc.com"
+  },
+  "homepage": "https://www.softwaredlc.com",
+  "repository": "https://github.com/SoftwareDLC/plugins",
+  "license": "FSL-1.1-ALv2",
+  "keywords": [
+    "softwaredlc",
+    "sdlc",
+    "graph",
+    "connector"
+  ],
+  "privacyPolicyUrl": "https://www.softwaredlc.com/privacy-policy",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
