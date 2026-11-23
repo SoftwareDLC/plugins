@@ -4,7 +4,7 @@ SoftwareDLC's Claude Code plugins.
 
 | Plugin | Version | What it does |
 | --- | --- | --- |
-| [softwaredlc](plugins/softwaredlc) | 0.10.10 | (Beta) Build a first SoftwareDLC graph from your code, and inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree. |
+| [softwaredlc](plugins/softwaredlc) | 0.10.11 | (Beta) Build a first SoftwareDLC graph from your code, and inspect and author SoftwareDLC graph proposals in an explicitly bound local AI worktree. |
 
 Install from this marketplace:
 

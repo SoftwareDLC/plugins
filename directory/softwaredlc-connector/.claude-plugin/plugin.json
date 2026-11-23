@@ -1,6 +1,6 @@
 {
   "name": "softwaredlc-connector",
-  "version": "0.10.10",
+  "version": "0.10.11",
   "description": "(Beta) SoftwareDLC reference knowledge, read access to your SoftwareDLC projects and SDLC graphs, and Maintain support issues (list, read, and log) through the hosted SoftwareDLC connector.",
   "author": {
     "name": "SoftwareDLC",
@@ -17,6 +17,9 @@
     "connector"
   ],
   "privacyPolicyUrl": "https://www.softwaredlc.com/privacy-policy",
+  "displayName": "SoftwareDLC Connector",
+  "supportUrl": "https://github.com/SoftwareDLC/plugins/issues",
+  "documentationUrl": "https://github.com/SoftwareDLC/plugins/blob/main/directory/softwaredlc-connector/README.md",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }
