@@ -47,6 +47,9 @@ install the full `softwaredlc` plugin in Claude Code instead:
 - Privacy Policy: https://www.softwaredlc.com/privacy-policy
 - Terms of Service: https://www.softwaredlc.com/terms
 - Support: support@softwaredlc.com
+- Issues at https://github.com/SoftwareDLC/plugins/issues are public. Do not
+  post personal data, secrets, or account details there. For private matters,
+  email support@softwaredlc.com.
 
 ## License
 

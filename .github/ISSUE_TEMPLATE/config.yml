@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Private matters: email support@softwaredlc.com"
+    url: "mailto:support@softwaredlc.com"
+    about: "Issues here are public. For anything about your account, billing, personal data, or a security problem, email support@softwaredlc.com instead."

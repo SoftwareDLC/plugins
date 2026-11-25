@@ -1,0 +1,19 @@
+name: Report a problem or ask a question
+description: Report a problem with a SoftwareDLC plugin, or ask a question about it. Everyone can read issues here.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issues in this repository are public.** Do not post personal data, secrets such as API keys or tokens, or account details. For private matters, email support@softwaredlc.com.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, or what is your question?
+      description: Say what you did, what you expected, and what you saw. Remove any personal data, secrets, or account details first.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin and version
+      description: The plugin's name and version, as /plugin shows them.
